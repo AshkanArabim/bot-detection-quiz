@@ -1,0 +1,6 @@
+.tweetcard {
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  padding: var(--global-spacing);
+}

@@ -1,8 +1,9 @@
+import './reset.css';
+
 import logo from "./logo.svg";
-import Header from "./components/Header";
-import Help from "./components/Help";
-import Main from "./components/Main";
-import './styles/reset.css'
+import Header from "./components/Header/Header";
+import Help from "./components/Help/Help";
+import Main from "./components/Main/Main";
 import "./App.css";
 
 function App() {

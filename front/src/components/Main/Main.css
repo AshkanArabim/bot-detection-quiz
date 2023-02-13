@@ -1,0 +1,4 @@
+div#main {
+  padding: var(--global-spacing);
+  width: var(--global-width);
+}
