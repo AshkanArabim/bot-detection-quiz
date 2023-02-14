@@ -6,7 +6,23 @@
 :root {
   --twitter-blue: #69a0ef;
   --global-spacing: 20px;
-  --global-width: min(700px, 100vw);
+  --global-width: min(800px, 100vw);
+  --global-br: 7px;
+  --global-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+button, .btnStyle{
+  background: var(--twitter-blue);
+  color: white;
+  border: 0;
+  padding: 0.4rem;
+  border-radius: var(--global-br);
+  transition: 0.2s;
+}
+
+button:hover, .btnStyle:hover {
+  background: black;
+  box-shadow: var(--global-shadow);
 }
 
 .App {

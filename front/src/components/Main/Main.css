@@ -1,4 +1,4 @@
 div#main {
-  padding: var(--global-spacing);
+  margin: var(--global-spacing);
   width: var(--global-width);
 }

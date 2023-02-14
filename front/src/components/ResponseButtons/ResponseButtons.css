@@ -1,0 +1,9 @@
+div#responseRoot {
+  display: flex;
+  justify-content: space-between;
+  margin: inherit;
+}
+
+label {
+  margin: 5px;
+}

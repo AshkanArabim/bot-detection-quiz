@@ -7,7 +7,7 @@ export default function Help() {
 
   return (
     <div>
-      <button onClick={showHelp}>Click for help.</button>
+      <button onClick={showHelp}>?</button>
     </div>
   );
 }
