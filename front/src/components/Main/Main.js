@@ -1,3 +1,4 @@
+import ProgressBar from "../ProgressBar/ProgressBar";
 import TweetCard from "../TweetCard/TweetCard";
 import ResponseButtons from "../ResponseButtons/ResponseButtons";
 
@@ -8,7 +9,7 @@ import "./Main.css";
 export default function Main() {
   return (
     <div id="main">
-      
+      <ProgressBar percentage = '32'/>
       <TweetCard tweetText="Placeholder tweet." />
       <ResponseButtons />
       {/* feedback */}

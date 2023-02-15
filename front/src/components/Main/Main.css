@@ -1,4 +1,7 @@
 div#main {
-  margin: var(--global-spacing);
+  padding: var(--global-spacing);
   width: var(--global-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--global-spacing);
 }

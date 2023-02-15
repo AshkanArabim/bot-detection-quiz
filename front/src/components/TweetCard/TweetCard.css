@@ -1,6 +1,5 @@
 .tweetcard {
   text-align: left;
-  margin: inherit;
   background: white;
   box-shadow: var(--global-shadow);
   border-radius: var(--global-br);
