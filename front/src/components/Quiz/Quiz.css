@@ -1,4 +1,4 @@
-div#main {
+div#Quiz {
   padding: var(--global-spacing);
   width: var(--global-width);
   display: flex;

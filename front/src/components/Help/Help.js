@@ -1,3 +1,5 @@
+import './Help.css';
+
 export default function Help() {
   function showHelp() {
     alert(
@@ -7,7 +9,7 @@ export default function Help() {
 
   return (
     <div>
-      <button onClick={showHelp}>?</button>
+      <button onClick={showHelp} className = 'helpBtn'>?</button>
     </div>
   );
 }

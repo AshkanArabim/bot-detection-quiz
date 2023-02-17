@@ -1,0 +1,52 @@
+{
+  "tweets" : [
+    {
+      "content": "thanks for your patience as we’ve worked to make Blue better – we’re excited and looking forward to sharing more with you soon!",
+      "id": 1,
+      "answer": "yes",
+      "response": null
+    },
+    {
+      "content": "now everyone can mix GIFs, videos, and images in one Tweet, available on iOS and Android",
+      "id": 2,
+      "answer": "yes",
+      "response": null
+    },
+    {
+      "content": "will follow anyone who makes us laugh",
+      "id": 3,
+      "answer": "no",
+      "response": null
+    },
+    {
+      "content": "Twitter Spaces are real live audio convos you can join from your couch. or the dog park. or the bathtub. wherever you are, really.",
+      "id": 4,
+      "answer": "yes",
+      "response": null
+    },
+    {
+      "content": "how do other people not constantly reply to their own tweets i always have extra info to add",
+      "id": 5,
+      "answer": "yes",
+      "response": null
+    },
+    {
+      "content": "laughing but crying",
+      "id": 6,
+      "answer": "no",
+      "response": null
+    },
+    {
+      "content": "You asked (a lot), so we made it. Now rolling out in Labs: NFT Profile Pictures on iOS",
+      "id": 7,
+      "answer": "yes",
+      "response": null
+    },
+    {
+      "content": "Literally unreal. Manifest your dreams! It costs you nothing and you never know, one day it might come true. \n Huge thanks to \n @Twitter \nfor the love. Never thought in a million year I'd  be on a billboard  🤯",
+      "id": 8,
+      "answer": "yes",
+      "response": null
+    }
+  ]
+}

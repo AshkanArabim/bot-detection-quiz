@@ -1,16 +1,16 @@
-import './reset.css';
+import "./reset.css";
 
-import logo from "./logo.svg";
 import Header from "./components/Header/Header";
 import Help from "./components/Help/Help";
-import Main from "./components/Main/Main";
+import Quiz from "./components/Quiz/Quiz";
 import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Quiz />
       <Help />
     </div>
   );
