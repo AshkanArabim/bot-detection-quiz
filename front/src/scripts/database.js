@@ -1,6 +1,6 @@
 import data from "./sampleData.json";
 
-export const database = (function database() {
+export const database = function database() {
   let tweetsNotAccessed = data.tweets;
   let selectedTweets;
 
@@ -10,7 +10,7 @@ export const database = (function database() {
     for (let i = 0; i < quantity; i++) {
       let randomIndex = randInt(tweetsNotAccessed.length);
       selectedTweets.push(tweetsNotAccessed[randomIndex]);
-      delete tweetsNotAccessed[randomIndex];
+      tweetsNotAccessed.splice(tweetsNotAccessed, 1);
     }
   }
 
@@ -18,7 +18,7 @@ export const database = (function database() {
   function selectRandomTweet() {
     let randomIndex = randInt(selectedTweets.length);
     let randomTweet = selectedTweets[randomIndex];
-    delete selectedTweets[randomIndex];
+    selectedTweets.splice(randomIndex, 1);
     console.log(selectedTweets);
     return randomTweet;
   }
@@ -31,4 +31,4 @@ export const database = (function database() {
     getTweets,
     selectRandomTweet,
   };
-});
+};
