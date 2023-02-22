@@ -1,15 +1,12 @@
 import "./ResponseButtons.css";
 
-export default function ResponseButtons() {
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
+export default function ResponseButtons(props) {
 
   return (
     <div id="responseRoot">
       <h3>Do you think this is bot-generated or a scam?</h3>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={props.handleSubmit}>
         <label htmlFor="userResponseYes" className="btnStyle">
           <input type="radio" name="userResponse" id="userResponseYes"></input>
           Yes

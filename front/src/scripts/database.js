@@ -10,7 +10,7 @@ export const database = function database() {
     for (let i = 0; i < quantity; i++) {
       let randomIndex = randInt(tweetsNotAccessed.length);
       selectedTweets.push(tweetsNotAccessed[randomIndex]);
-      tweetsNotAccessed.splice(tweetsNotAccessed, 1);
+      tweetsNotAccessed.splice(randomIndex, 1);
     }
   }
 
@@ -19,7 +19,6 @@ export const database = function database() {
     let randomIndex = randInt(selectedTweets.length);
     let randomTweet = selectedTweets[randomIndex];
     selectedTweets.splice(randomIndex, 1);
-    console.log("This is running too many times")
     console.log(selectedTweets);
     return randomTweet;
   }
