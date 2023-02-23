@@ -23,21 +23,23 @@ export default function Quiz() {
     setQNum(qNum + 1);
   }
 
-  function submitAnswer(ans) {
-    if(ans === tweet.answer) {
+  function handleSubmit(e, ans) {
+    e.preventDefault();
+    if (ans === tweet.answer) {
       setScore(score + 1);
-      console.log("Your answer: " + ans)
-      console.log("Correct answer: " + tweet.answer)
-      console.log("Answer is correct!!!")
+      console.log("Your answer: " + ans);
+      console.log("Correct answer: " + tweet.answer);
+      console.log("Answer is correct!!!");
+    } else {
+      console.log("answer is wrong!!!");
     }
   }
 
   return (
     <div id="Quiz">
       <ProgressBar percentage={(qNum / testLength) * 100} />
-      <TweetCard tweetText={tweet.content} tweetNum = {qNum} />
-      <ResponseButtons handleSubmit = {submitAnswer}/>
-      <button onClick={nextQuestion}>Next question</button>
+      <TweetCard tweetText={tweet.content} tweetNum={qNum} />
+      <ResponseButtons handleSubmit={handleSubmit} />
       {/* feedback */}
     </div>
   );

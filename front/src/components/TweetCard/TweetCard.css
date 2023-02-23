@@ -1,7 +1,0 @@
-.tweetcard {
-  text-align: left;
-  background: white;
-  box-shadow: var(--global-shadow);
-  border-radius: var(--global-br);
-  padding: var(--global-spacing);
-}

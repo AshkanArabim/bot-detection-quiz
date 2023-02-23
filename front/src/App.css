@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+.card {
+  text-align: left;
+  background: white;
+  box-shadow: var(--global-shadow);
+  border-radius: var(--global-br);
+  padding: var(--global-spacing);
+}
+
 :root {
   --twitter-blue: #69a0ef;
   --global-spacing: 20px;
