@@ -4,9 +4,9 @@ export default function ResponseButtons(props) {
   let isSubmitted = props.isSubmitted;
   let ans = "";
 
-  if (!isSubmitted) {
+  // if (!isSubmitted) {
     
-  }
+  // }
 
   function setAnswer(val) {
     console.log("Old value: " + ans);

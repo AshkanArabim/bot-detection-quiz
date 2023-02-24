@@ -1,3 +1,11 @@
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
 div#Quiz {
   padding: var(--global-spacing);
   width: var(--global-width);

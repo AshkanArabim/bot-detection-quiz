@@ -1,9 +1,11 @@
-import './ProgressBar.css';
-
 export default function ProgressBar(props) {
+  let progressBoxes = [];
+  
+
   return (
-    <div>
-      <progress id = 'testProgress' value = {props.percentage} max='100'>{props.percentage}</progress>
+    <div className="progressBar">
+      {/* <progress id = 'testProgress' value = {props.percentage} max='100'>{props.percentage}</progress> */}
+      {progressBoxes}
     </div>
   )
 }

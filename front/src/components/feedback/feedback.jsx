@@ -1,7 +1,6 @@
-import './Feedback.css'
-
 export default function Feedback(props) {
-  let body = "Feedback: " + (props.isCorrect ? "That's right!" : "Look carefully");
+  console.log(props.isCorrect);
+  let body = "Feedback: " + (props.isCorrect ? "That's right! " : "Look carefully! ");
   let classes = "card " + (props.isCorrect ? "green" : 'red');
 
   if (props.isScam) {

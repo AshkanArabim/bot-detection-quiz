@@ -18,23 +18,21 @@ export default function Quiz() {
   const [qNum, setQNum] = useState(0);
   const [score, setScore] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   function nextQuestion() {
     console.log("--- next question clicked ---");
     setTweet(tweets.selectRandomTweet());
     setQNum(qNum + 1);
     setIsSubmitted(false);
+    setIsCorrect(false);
   }
 
   function handleSubmit(e, ans) {
     e.preventDefault();
     if (ans === tweet.answer) {
+      setIsCorrect(true);
       setScore(score + 1);
-      console.log("Your answer: " + ans);
-      console.log("Correct answer: " + tweet.answer);
-      console.log("Answer is correct!!!");
-    } else {
-      console.log("answer is wrong!!!");
     }
     setIsSubmitted(true);
   }
@@ -50,7 +48,7 @@ export default function Quiz() {
 
       {/* This only shows when the test is submitted */}
 
-      {isSubmitted && <Feedback></Feedback>}
+      {isSubmitted && <Feedback isCorrect={isCorrect}></Feedback>}
       {isSubmitted && (
         <button onClick={nextQuestion}>Next Tweet</button>
       )}
