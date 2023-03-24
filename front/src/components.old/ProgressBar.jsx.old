@@ -1,0 +1,25 @@
+import { useState } from 'react';
+
+import './ProgressBar.css'
+
+export default function ProgressBar(props) {
+  const [questions, setQuestions] = useState([]);
+
+  function nextQuestion () {
+    setQuestions(questions.push(
+      <div className='active'></div>
+    ))
+  }
+
+  return (
+    <div
+      className="progressBar"
+      style={{
+        gridTemplateRows: `${props.length} fr`,
+      }}
+    >
+      {/* <progress id = 'testProgress' value = {props.percentage} max='100'>{props.percentage}</progress> */}
+      {/* {progressBoxes} */}
+    </div>
+  );
+}

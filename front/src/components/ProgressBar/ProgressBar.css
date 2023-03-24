@@ -1,7 +1,6 @@
-progress {
+/* progress {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   width: 100%;
 }
 
@@ -12,8 +11,34 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   background-color: var(--twitter-blue);
-}
+} */
 
 .progressBar {
-  display: grid;
-}/*# sourceMappingURL=ProgressBar.css.map */
+  height: var(--global-spacing);
+  border-radius: var(--global-br);
+  display: flex;
+  background: lightgray;
+}
+
+/* debug */
+
+.progressBar > div {
+  /* border: 1px solid black; */
+  flex: 1 1 0;
+}
+
+.progressBar > div:first-child {
+  border-radius: var(--global-br) 0 0 var(--global-br);
+}
+
+.progressBar > div:last-child {
+  border-radius: 0 var(--global-br) var(--global-br) 0;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}

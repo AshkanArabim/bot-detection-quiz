@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import ProgressBar from "../ProgressBar/ProgressBar.jsx";
-import TweetCard from "../TweetCard/TweetCard";
-import ResponseButtons from "../ResponseButtons/ResponseButtons";
-import Feedback from "../feedback/Feedback";
-import { database } from "../../scripts/database";
+import ProgressBar from "../ProgressBar/ProgressBar.jsx.old";
+import TweetCard from "../components/TweetCard/TweetCard";
+import ResponseButtons from "../components/ResponseButtons/ResponseButtons";
+import Feedback from "../components/feedback/Feedback";
+import { database } from "../scripts/database";
 
 import "./Quiz.css";
 
@@ -19,17 +19,10 @@ export default function Quiz() {
   const [score, setScore] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  
-  // declare varialbe for user answers
-  const [answers, setAnswers] = useState(Array(testLength).fill(null));
-
-  // DEBUG
-  console.log(tweet)
 
   function nextQuestion() {
     console.log("--- next question clicked ---");
     setTweet(tweets.selectRandomTweet());
-
     setQNum(qNum + 1);
     setIsSubmitted(false);
     setIsCorrect(false);
@@ -37,27 +30,19 @@ export default function Quiz() {
 
   function handleSubmit(e, ans) {
     e.preventDefault();
-    let isCorrectDuplicate = false;
+
+    // update the progressBar here
 
     if (ans === tweet.answer) {
       setIsCorrect(true);
-      isCorrectDuplicate = true;
       setScore(score + 1);
     }
-
-    // update answer array 
-    console.log("isCorrect: ")
-    let newAns = [...answers];
-    newAns[qNum] = isCorrectDuplicate;
-    setAnswers(newAns)
-    console.log(isCorrectDuplicate)
-
     setIsSubmitted(true);
   }
 
   return (
     <div id="Quiz">
-      <ProgressBar answers = {answers} />
+      <ProgressBar length = {qNum} />
       <TweetCard tweetText={tweet.content} tweetNum={qNum + 1} />
       <ResponseButtons
         handleSubmit={handleSubmit}
