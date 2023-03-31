@@ -7,9 +7,10 @@ import Feedback from "../feedback/Feedback";
 import { database } from "../../scripts/database";
 
 import "./Quiz.css";
+import Results from "../Results/Results.jsx";
 
 const tweets = database(); // tweets is an instance of database
-const testLength = 8; // how many questions to import from database
+const testLength = 3; // how many questions to import from database
 tweets.getTweets(testLength); // get a number of random tweets form database
 const firstTweet = tweets.selectRandomTweet();
 
@@ -55,7 +56,14 @@ export default function Quiz() {
     setIsSubmitted(true);
   }
 
-  return (
+  // if there are not questions left, display result
+  const output = (tweet === undefined) ? (
+    <div id="Quiz">
+      <Results answers = {answers}></Results>
+      {/* restart button */}
+      
+    </div>
+  ) : (
     <div id="Quiz">
       <ProgressBar answers = {answers} />
       <TweetCard tweetText={tweet.content} tweetNum={qNum + 1} />
@@ -71,5 +79,7 @@ export default function Quiz() {
         <button onClick={nextQuestion}>Next Tweet</button>
       )}
     </div>
-  );
+  )
+
+  return output;
 }
