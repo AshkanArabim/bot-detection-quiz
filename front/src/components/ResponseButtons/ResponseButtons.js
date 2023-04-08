@@ -26,7 +26,7 @@ export default function ResponseButtons(props) {
             name="userResponse"
             id="userResponseYes"
             disabled={isSubmitted}
-            checked
+            defaultChecked
           ></input>
           Yes
         </label>
@@ -37,7 +37,7 @@ export default function ResponseButtons(props) {
             name="userResponse"
             id="userResponseNo"
             disabled={isSubmitted}
-            checked
+            defaultChecked
           ></input>
           No
         </label>

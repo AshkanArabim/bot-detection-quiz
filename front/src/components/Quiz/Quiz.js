@@ -10,7 +10,7 @@ import "./Quiz.css";
 import Results from "../Results/Results.jsx";
 
 const tweets = database(); // tweets is an instance of database
-const testLength = 3; // how many questions to import from database
+const testLength = 5; // how many questions to import from database
 tweets.getTweets(testLength); // get a number of random tweets form database
 const firstTweet = tweets.selectRandomTweet();
 
@@ -60,8 +60,6 @@ export default function Quiz() {
   const output = (tweet === undefined) ? (
     <div id="Quiz">
       <Results answers = {answers}></Results>
-      {/* restart button */}
-      
     </div>
   ) : (
     <div id="Quiz">
